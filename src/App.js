@@ -2,6 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const apiKey = process.env.REACT_APP_API_KEY;
+
+  const handleClick = () => {
+    console.log('apiKey', apiKey)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +23,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleClick}>Show API KEY in console</button>
       </header>
     </div>
   );
